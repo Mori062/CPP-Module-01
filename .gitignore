@@ -1,5 +1,13 @@
-*.o
+# debug
 .vscode/
+
+# object files
+obj/
+*.o
+*.d
 
 # executables
 megaphone
+horde
+brain
+violence

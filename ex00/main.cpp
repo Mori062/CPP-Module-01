@@ -1,11 +1,12 @@
 #include "Zombie.hpp"
 int main(void)
 {
-	Zombie	*zombie;
-
-	zombie = newZombie("John");
-	randomChump("Jack");
+	Zombie	*zombie = newZombie("John");
+	zombie->announce();
+	randomChump("Kevin");
 	randomChump(zombie->getName());
 	delete zombie;
+
+	// system("leaks -q megaphone");
 	return (0);
 }
