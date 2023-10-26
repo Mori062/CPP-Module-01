@@ -14,7 +14,18 @@ int	main(void)
 	std::cout << std::setw(20) << "stringPTR address: " << stringPTR << std::endl;
 	std::cout << std::setw(20) << "stringREF address: " << &stringREF << std::endl;
 	std::cout << "----------------------------------------" << std::endl;
-	std::cout << "stringPTR string: " << *stringPTR << std::endl;
-	std::cout << "stringREF string: " << stringREF << std::endl;
+	std::cout << std::setw(20) << "string string: " << string << std::endl;
+	std::cout << std::setw(20) << "stringPTR string: " << *stringPTR << std::endl;
+	std::cout << std::setw(20) << "stringREF string: " << stringREF << std::endl;
+	std::cout << "----------------------------------------" << std::endl;
+	stringREF = "HELLO WORLD";
+	std::cout << "----------------------------------------" << std::endl;
+	std::cout << std::setw(20) << "string address: " << &string << std::endl;
+	std::cout << std::setw(20) << "stringPTR address: " << stringPTR << std::endl;
+	std::cout << std::setw(20) << "stringREF address: " << &stringREF << std::endl;
+	std::cout << "----------------------------------------" << std::endl;
+	std::cout << std::setw(20) << "string string: " << string << std::endl;
+	std::cout << std::setw(20) << "stringPTR string: " << *stringPTR << std::endl;
+	std::cout << std::setw(20) << "stringREF string: " << stringREF << std::endl;
 	std::cout << "----------------------------------------" << std::endl;
 }

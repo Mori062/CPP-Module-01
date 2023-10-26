@@ -3,8 +3,12 @@
 
 # object files
 obj/
+objs/
 *.o
 *.d
+
+# replace files
+*.replace
 
 # executables
 megaphone
@@ -12,3 +16,5 @@ horde
 brain
 violence
 replace
+Harl
+harlFilter

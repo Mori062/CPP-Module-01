@@ -7,6 +7,10 @@ int main(void)
 	randomChump(zombie->getName());
 	delete zombie;
 
-	// system("leaks -q megaphone");
 	return (0);
 }
+
+// __attribute__((destructor)) void end(void)
+// {
+// 	system("leaks -q megaphone");
+// }
