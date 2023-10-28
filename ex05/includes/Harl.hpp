@@ -4,11 +4,11 @@
 # include <iostream>
 # include <string>
 
-# define RED "\033[31m"
-# define ORANGE "\033[38;5;208m"
-# define YELLOW "\033[33m"
-# define GREEN "\033[32m"
-# define RESET "\033[0m"
+# define RED	"\033[31m"
+# define ORANGE	"\033[38;5;208m"
+# define YELLOW	"\033[33m"
+# define GREEN	"\033[32m"
+# define RESET	"\033[0m"
 
 class Harl
 {

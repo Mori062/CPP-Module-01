@@ -3,29 +3,29 @@
 
 int	main(void)
 {
-	std::string	string;
-	std::string	*stringPTR;
+	std::string	name;
+	std::string	*namePTR;
 
-	string = "HI THIS IS BRAIN";
-	stringPTR = &string;
-	std::string	&stringREF = string;
+	name = "HI THIS IS BRAIN";
+	namePTR = &name;
+	std::string	&nameREF = name;
 	std::cout << "----------------------------------------" << std::endl;
-	std::cout << std::setw(20) << "string address: " << &string << std::endl;
-	std::cout << std::setw(20) << "stringPTR address: " << stringPTR << std::endl;
-	std::cout << std::setw(20) << "stringREF address: " << &stringREF << std::endl;
+	std::cout << std::setw(20) << "name address: " << &name << std::endl;
+	std::cout << std::setw(20) << "namePTR address: " << namePTR << std::endl;
+	std::cout << std::setw(20) << "nameREF address: " << &nameREF << std::endl;
 	std::cout << "----------------------------------------" << std::endl;
-	std::cout << std::setw(20) << "string string: " << string << std::endl;
-	std::cout << std::setw(20) << "stringPTR string: " << *stringPTR << std::endl;
-	std::cout << std::setw(20) << "stringREF string: " << stringREF << std::endl;
+	std::cout << std::setw(20) << "name name: " << name << std::endl;
+	std::cout << std::setw(20) << "namePTR name: " << *namePTR << std::endl;
+	std::cout << std::setw(20) << "nameREF name: " << nameREF << std::endl;
 	std::cout << "----------------------------------------" << std::endl;
-	stringREF = "HELLO WORLD";
+	nameREF = "HELLO WORLD";
 	std::cout << "----------------------------------------" << std::endl;
-	std::cout << std::setw(20) << "string address: " << &string << std::endl;
-	std::cout << std::setw(20) << "stringPTR address: " << stringPTR << std::endl;
-	std::cout << std::setw(20) << "stringREF address: " << &stringREF << std::endl;
+	std::cout << std::setw(20) << "name address: " << &name << std::endl;
+	std::cout << std::setw(20) << "namePTR address: " << namePTR << std::endl;
+	std::cout << std::setw(20) << "nameREF address: " << &nameREF << std::endl;
 	std::cout << "----------------------------------------" << std::endl;
-	std::cout << std::setw(20) << "string string: " << string << std::endl;
-	std::cout << std::setw(20) << "stringPTR string: " << *stringPTR << std::endl;
-	std::cout << std::setw(20) << "stringREF string: " << stringREF << std::endl;
+	std::cout << std::setw(20) << "name name: " << name << std::endl;
+	std::cout << std::setw(20) << "namePTR name: " << *namePTR << std::endl;
+	std::cout << std::setw(20) << "nameREF name: " << nameREF << std::endl;
 	std::cout << "----------------------------------------" << std::endl;
 }

@@ -7,7 +7,7 @@ OBJS = $(addprefix $(OBJDIR)/, $(SRC:.cpp=.o))
 RM = rm -f
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -MP -MMD
-INC = -I./includes/HumanA.hpp -I./includes/HumanB.hpp -I./includes/Weapon.hpp
+INC = -I./includes/
 
 all : $(NAME)
 
