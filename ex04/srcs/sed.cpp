@@ -15,15 +15,15 @@ Sed::~Sed(void)
 void	Sed::replace(void)
 {
 	std::ifstream	ifs(_filename);
-	std::ofstream	ofs(_filename + ".replace");
 	std::string		line;
 	size_t			pos;
 
-	if (!ifs.is_open())
+	if (ifs.fail())
 	{
 		std::cerr << RED << ERROR_OPEN_FILE << RESET << std::endl;
 		return ;
 	}
+	std::ofstream	ofs(_filename + ".replace");
 	while (std::getline(ifs, line))
 	{
 		pos = 0;
