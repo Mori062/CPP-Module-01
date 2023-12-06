@@ -1,4 +1,4 @@
-NAME = megaphone
+NAME = Zombie
 SRC = main.cpp Zombie.cpp newZombie.cpp randomChump.cpp
 OBJS = $(SRC:%.cpp=%.o)
 RM = rm -f

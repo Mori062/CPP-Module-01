@@ -28,6 +28,11 @@ class Harl
 		void	info(void);
 		void	warning(void);
 		void	error(void);
+		typedef void (Harl::* harl_func_t) (void);
+		void		executeDebug(void);
+		void		executeInfo(void);
+		void		executeWarning(void);
+		void		executeError(void);
 	public:
 		Harl(void);
 		~Harl(void);

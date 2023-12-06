@@ -39,34 +39,30 @@ void	Harl::error(void)
 	std::cout << "This is unacceptable! I want to speak to the manager now." << std::endl;
 }
 
-static int get_level(std::string level)
-{
-	if (level == "DEBUG")
-		return DEBUG;
-	else if (level == "INFO")
-		return INFO;
-	else if (level == "WARNING")
-		return WARNING;
-	else if (level == "ERROR")
-		return ERROR;
-	else
-		return UNKWOWN;
-}
-
 void	Harl::complain(std::string level)
 {
-	switch (get_level(level))
+	const size_t size = 4;
+	size_t i;
+	std::string levels[size] = {"DEBUG", "INFO", "WARNING", "ERROR"};
+	void (Harl::*functions[size])() = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
+
+	for (i = 0; i < size; i++)
 	{
-	case 1:
-		debug();
-	case 2:
-		info();
-	case 3:
-		warning();
-	case 4:
-		error();
-		break;
-	default:
-		std::cout << RED << "[ Probably complaining about insignificant problems ]" << RESET << std::endl;
+		if (level == levels[i])
+			break ;
+	}
+	switch (i)
+	{
+		case 0:
+			(this->*functions[0])();
+		case 1:
+			(this->*functions[1])();
+		case 2:
+			(this->*functions[2])();
+		case 3:
+			(this->*functions[3])();
+			break ;
+		default:
+			std::cout << RED << "[ Probably complaining about insignificant problems ]" << RESET << std::endl;
 	}
 }

@@ -16,6 +16,7 @@ void	Sed::replace(void)
 {
 	std::ifstream	ifs(_filename);
 	std::string		line;
+	std::string		new_filename;
 	size_t			pos;
 
 	if (ifs.fail())
@@ -23,7 +24,8 @@ void	Sed::replace(void)
 		std::cerr << RED << ERROR_OPEN_FILE << RESET << std::endl;
 		return ;
 	}
-	std::ofstream	ofs(_filename + ".replace");
+	new_filename = _filename + ".replace";
+	std::ofstream	ofs(new_filename.c_str());
 	while (std::getline(ifs, line))
 	{
 		pos = 0;

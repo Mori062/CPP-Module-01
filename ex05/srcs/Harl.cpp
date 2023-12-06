@@ -36,14 +36,17 @@ void	Harl::error(void)
 
 void	Harl::complain(std::string level)
 {
-	if (level == "debug")
-		this->debug();
-	else if (level == "info")
-		this->info();
-	else if (level == "warning")
-		this->warning();
-	else if (level == "error")
-		this->error();
-	else
-		std::cerr << RED << "Invalid level" << RESET << std::endl;
+	const size_t size = 4;
+	std::string levels[size] = {"DEBUG", "INFO", "WARNING", "ERROR"};
+	void (Harl::*functions[size])() = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
+	
+	for (size_t i = 0; i < size; i++)
+	{
+		if (levels[i] == level)
+		{
+			(this->*functions[i])();
+			return ;
+		}
+	}
+	std::cerr << RED << "Invalid level" << RESET << std::endl;
 }

@@ -7,6 +7,7 @@
 
 # define ERROR_ARGC "usage: ./replace <filename> <string1> <string2>"
 # define ERROR_OPEN_FILE "Error: could not open file"
+# define ERROR_BEFORE_STRING "Error: before string starts from null character"
 
 # define RED "\033[0;31m"
 # define RESET "\033[0m"

@@ -11,7 +11,7 @@ objs/
 *.replace
 
 # executables
-megaphone
+Zombie
 horde
 brain
 violence
