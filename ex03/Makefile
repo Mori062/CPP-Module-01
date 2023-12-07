@@ -16,6 +16,7 @@ $(NAME): $(OBJS)
 
 $(OBJDIR)/%.o: $(SRCDIR)/%.cpp
 	mkdir -p $(OBJDIR)
+	clang-format -i $<
 	$(CXX) $(CXXFLAGS) $(INC) -o $@ -c $<
 
 clean :

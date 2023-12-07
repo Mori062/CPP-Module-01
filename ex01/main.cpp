@@ -1,12 +1,12 @@
 #include "Zombie.hpp"
 
-int	main(void)
+int main(void)
 {
-	Zombie	*zombies = zombieHorde(10, "John");
+	Zombie *zombies = zombieHorde(10, "John");
 
 	for (int i = 0; i < 10; i++)
 		zombies[i].announce();
-	delete [] zombies;
+	delete[] zombies;
 	return (0);
 }
 

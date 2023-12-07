@@ -1,14 +1,14 @@
-#include <iostream>
 #include <iomanip>
+#include <iostream>
 
-int	main(void)
+int main(void)
 {
-	std::string	name;
-	std::string	*namePTR;
+	std::string name;
+	std::string *namePTR;
 
-	name = "HI THIS IS BRAIN";
-	namePTR = &name;
-	std::string	&nameREF = name;
+	name				 = "HI THIS IS BRAIN";
+	namePTR				 = &name;
+	std::string &nameREF = name;
 	std::cout << "----------------------------------------" << std::endl;
 	std::cout << std::setw(20) << "name address: " << &name << std::endl;
 	std::cout << std::setw(20) << "namePTR address: " << namePTR << std::endl;

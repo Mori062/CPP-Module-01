@@ -1,6 +1,7 @@
 NAME = Zombie
 SRC = main.cpp Zombie.cpp newZombie.cpp randomChump.cpp
 OBJS = $(SRC:%.cpp=%.o)
+HEADERS = Zombie.hpp
 RM = rm -f
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
@@ -11,6 +12,7 @@ $(NAME): $(OBJS)
 	$(CXX) $(CXXFLAGS) -o $@ $^
 
 %.o: %.cpp
+	clang-format -i $<
 	$(CXX) $(CXXFLAGS) -o $@ -c $<
 
 clean :

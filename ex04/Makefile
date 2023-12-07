@@ -13,6 +13,7 @@ $(NAME): $(OBJS)
 
 objs/%.o: srcs/%.cpp
 	mkdir -p objs
+	clang-format -i $<
 	$(CXX) $(CXXFLAGS) $(INC) -o $@ -c $<
 
 clean :

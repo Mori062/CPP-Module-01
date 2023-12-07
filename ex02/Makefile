@@ -11,6 +11,7 @@ $(NAME): $(OBJS)
 	$(CXX) $(CXXFLAGS) -o $@ $^
 
 %.o: %.cpp
+	clang-format -i $<
 	$(CXX) $(CXXFLAGS) -o $@ -c $<
 
 clean :

@@ -17,17 +17,18 @@ Zombie::~Zombie()
 	std::cout << RED << this->_name << " is dead" << RESET << std::endl;
 }
 
-void	Zombie::announce( void ) const
+void Zombie::announce(void) const
 {
-	std::cout << CYAN << "<" << this->_name << "> BraiiiiiiinnnzzzZ..." << RESET << std::endl;
+	std::cout << CYAN << "<" << this->_name << "> BraiiiiiiinnnzzzZ..." << RESET
+			  << std::endl;
 }
 
-std::string	Zombie::getName( void ) const
+std::string Zombie::getName(void) const
 {
 	return (this->_name);
 }
 
-void	Zombie::setName(std::string name)
+void Zombie::setName(std::string name)
 {
 	this->_name = name;
 }
