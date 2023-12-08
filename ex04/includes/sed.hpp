@@ -21,7 +21,7 @@ class Sed
 	public:
 		Sed(std::string filename, std::string s1, std::string s2);
 		~Sed(void);
-		void	replace(void);
+		int	replace(void);
 };
 
 #endif

@@ -12,7 +12,7 @@ Sed::~Sed(void)
 	return;
 }
 
-void Sed::replace(void)
+int Sed::replace(void)
 {
 	std::ifstream ifs(_filename);
 	std::string line;
@@ -21,7 +21,7 @@ void Sed::replace(void)
 
 	if (ifs.fail()) {
 		std::cerr << RED << ERROR_OPEN_FILE << RESET << std::endl;
-		return;
+		return 1;
 	}
 	new_filename = _filename + ".replace";
 	std::ofstream ofs(new_filename.c_str());
@@ -31,12 +31,16 @@ void Sed::replace(void)
 			pos = line.find(_before_string, pos);
 			if (pos == std::string::npos)
 				break;
-			line.replace(pos, _before_string.length(), _after_string);
+			// Use erase() + insert() instead of replace() because replace() is
+			// forbidden. line.replace(pos, _before_string.length(),
+			// _after_string);
+			line.erase(pos, _before_string.length());
+			line.insert(pos, _after_string);
 			pos += _after_string.length();
 		}
 		ofs << line << std::endl;
 	}
 	ifs.close();
 	ofs.close();
-	return;
+	return 0;
 }

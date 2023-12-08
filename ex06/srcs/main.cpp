@@ -6,9 +6,7 @@ int main(int argc, char **argv)
 		std::cerr << RED << ERROR_ARGC << RESET << std::endl;
 		return (1);
 	}
-
 	Harl harl;
 	harl.complain(argv[1]);
-
 	return (0);
 }

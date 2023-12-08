@@ -11,6 +11,5 @@ int main(int argc, char **argv)
 		return 1;
 	}
 	Sed sed(argv[1], argv[2], argv[3]);
-	sed.replace();
-	return 0;
+	return sed.replace();
 }
