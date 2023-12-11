@@ -12,7 +12,6 @@ $(NAME): $(OBJS)
 	$(CXX) $(CXXFLAGS) -o $@ $^
 
 %.o: %.cpp
-	clang-format -i $<
 	$(CXX) $(CXXFLAGS) -o $@ -c $<
 
 clean :
@@ -23,4 +22,7 @@ fclean : clean
 
 re : fclean all
 
-.PHONY : all clean fclean re
+format :
+	clang-format -i $(SRC) $(HEADERS)
+
+.PHONY : all clean fclean re format

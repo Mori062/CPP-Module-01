@@ -13,7 +13,6 @@ $(NAME): $(OBJS)
 
 objs/%.o: srcs/%.cpp
 	mkdir -p objs
-	clang-format -i $<
 	$(CXX) $(CXXFLAGS) $(INC) -o $@ -c $<
 
 clean :
@@ -24,5 +23,8 @@ fclean : clean
 	$(RM) $(NAME)
 
 re : fclean all
+
+format :
+	clang-format -i $(SRCS) $(HEADERS)
 
 .PHONY : all clean fclean re
